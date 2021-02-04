@@ -1,0 +1,9 @@
+#teacher-create-bulk-form {
+    padding:50px;
+    border-top: 5px solid green;
+    width:100%;
+    border-radius: 5px 5px 0 0 ;
+    .invalid-feedback{
+        display: block !important;
+    }
+}

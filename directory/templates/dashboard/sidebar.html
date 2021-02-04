@@ -1,0 +1,35 @@
+<div id="sidebar">
+    <div class="sidebar_container d-flex flex-column">
+        <div class="sidebar_header">
+            <h4>
+            <strong>D<small>irectory</small> APP</strong>
+            
+            </h4>
+        </div>
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="icon fas fa-tachometer-alt"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'profiles:teachers_list' %}">
+                    <i class="icon fas fa-address-book"></i>
+                    Teachers
+                </a>
+            </li>
+        </ul>
+        <div class="copyright">
+            
+            
+            <span>
+                DirectoryAPP
+            </span>
+            <br>
+            <span>
+                copyright &copy; {% now 'Y' %}
+            </span>
+        </div>
+    </div>
+</div>

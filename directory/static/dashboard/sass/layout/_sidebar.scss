@@ -1,0 +1,45 @@
+@import '../abstract/colors';
+
+#sidebar {
+    width:220px;
+    position:fixed;
+    background:$sidebar_dark;
+    left:0;
+    top:0;
+    height: 100%;
+    .sidebar_container{
+        height: 100%;
+        .copyright{
+            margin-top:auto;
+            color:$sidebar_dark_selected_text;
+            font-size:12px;
+            text-align:center;
+            margin-bottom:10px;
+        }
+    }
+    .sidebar_header{
+        height: 50px;
+        padding:10px;
+        background:$sidebar_dark_selected_li;
+        color:$sidebar_dark_selected_text;
+    }
+    ul{
+        padding-inline-start: 0px;
+        padding-top:30px;
+        li{
+            a{
+                padding:5px 10px;
+                display: block;
+                color:$sidebar_primary_text;
+                &:hover {
+                    background:$sidebar_dark_selected_li;
+                    color:$sidebar_dark_selected_text;
+                }
+                i.icon{
+                    padding-inline-end:10px
+                }
+            }
+            
+        }
+    }
+}

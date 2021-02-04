@@ -1,0 +1,43 @@
+
+{% extends 'dashboard/dashboard_base.html' %}
+{% load crispy_forms_tags %}
+{% load show_errors %}
+{% block content %}
+    <div class="inner_content">
+
+        <div class="d-flex "">
+            <h4>Teachers Create</h4>
+        </div>
+     
+        <div  id="teacher-create-bulk-form" class="create-bulk-form mt-4 ">
+            <form class="" method="post" enctype="multipart/form-data"
+            action="{% url 'profiles:teachers_create_bulk' %}">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-success btn-sm mr-2">Submit</button>    
+            </form>
+        </div>
+
+        <div>
+            {% show_csv_errors csv_errors.success_objs 'Following Rows are successfully created' 'success' %}
+        </div>
+
+        <div>
+            {% show_csv_errors csv_errors.errors_while_saving_db_rows 'Errors occured while saving the data' 'errors' %}
+        </div>
+        
+        <div>
+            {% show_csv_errors csv_errors.db_exist_rows 'Data Existed in Database' 'errors' %}
+        </div>
+      
+        <div>
+            {% show_csv_errors csv_errors.duplicated_rows 'Duplicated rows in the Csv File' 'errors' %}
+        </div>
+      
+        <div>
+            {% show_csv_errors csv_errors.invalid_email_rows 'Invalid Email rows in the Csv File' 'errors' %}
+        </div> 
+
+    </div>
+
+{% endblock %}

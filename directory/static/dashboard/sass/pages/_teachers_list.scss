@@ -1,0 +1,23 @@
+.profile_card_content{
+    /* border:1px solid #ccc; */
+    border-radius: 15px 15px 15px 15px;
+    background-color: #404049;
+    .profile_card_header{
+        border-top:3px solid green;
+        border-radius: 10px 10px 0 0;
+        background:#eee;
+        color:#444;
+    }
+    .profile_card_detail {
+        small{
+            color: #fff;
+        }
+        h6{
+            color: #aaa;
+        }
+    }
+
+}
+
+
+

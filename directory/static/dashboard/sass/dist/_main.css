@@ -1,0 +1,146 @@
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#sidebar {
+  width: 220px;
+  position: fixed;
+  background: #263544;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+#sidebar .sidebar_container {
+  height: 100%;
+}
+#sidebar .sidebar_container .copyright {
+  margin-top: auto;
+  color: #b7c0cd;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#sidebar .sidebar_header {
+  height: 50px;
+  padding: 10px;
+  background: #1d2531;
+  color: #b7c0cd;
+}
+#sidebar ul {
+  padding-inline-start: 0px;
+  padding-top: 30px;
+}
+#sidebar ul li a {
+  padding: 5px 10px;
+  display: block;
+  color: #ECF0F1;
+}
+#sidebar ul li a:hover {
+  background: #1d2531;
+  color: #b7c0cd;
+}
+#sidebar ul li a i.icon {
+  padding-inline-end: 10px;
+}
+
+#navbar {
+  height: 50px;
+  padding: 10px 20px 10px 10px;
+  left: 220px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #eee;
+  z-index: 999;
+}
+#navbar ul {
+  margin: 0;
+  padding: 0;
+}
+#navbar ul .icon {
+  font-size: 12px;
+}
+
+#content_container {
+  padding-inline-start: 220px;
+}
+
+#main_content {
+  padding-top: 100px;
+  padding-inline-start: 30px;
+  padding-bottom: 100px;
+}
+
+.profile_card_content {
+  /* border:1px solid #ccc; */
+  border-radius: 15px 15px 15px 15px;
+}
+
+.profile_card_header {
+  border-top: 3px solid green;
+  border-radius: 10px 10px 0 0;
+  background: #eee;
+  color: #444;
+}
+
+.profile_card_content {
+  background-color: #404049;
+}
+
+.profile_card_detail small {
+  color: #fff;
+}
+
+.profile_card_detail h6 {
+  color: #aaa;
+}
+
+.profile_card_content {
+  /* border:1px solid #ccc; */
+  border-radius: 15px 15px 15px 15px;
+}
+
+.profile_card_header {
+  border-top: 3px solid green;
+  border-radius: 10px 10px 0 0;
+  background: #eee;
+  color: #444;
+}
+
+.profile_card_content {
+  background-color: #404049;
+}
+
+.profile_card_detail small {
+  color: #fff;
+}
+
+.profile_card_detail h6 {
+  color: #aaa;
+}
+
+#teacher-create-bulk-form {
+  padding: 50px;
+  border-top: 5px solid green;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+#teacher-create-bulk-form .invalid-feedback {
+  display: block !important;
+}
+
+.container-fluid {
+  padding: 0;
+}

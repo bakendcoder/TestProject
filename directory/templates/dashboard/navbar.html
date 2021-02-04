@@ -1,0 +1,15 @@
+<div id="navbar" class="d-flex justify-content-end align-items-center">
+    <ul class="">
+        <li class="">
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'auth:logout' %}">
+                    Logout <i class="icon fas fa-sign-out-alt"></i>
+                </a>
+            {% else %}
+                <a href="{% url 'auth:login' %}">
+                    Login <i class="icon fas fa-sign-in-alt"></i></i>
+                </a>
+            {% endif %}
+        </li>
+    </ul>
+</div>

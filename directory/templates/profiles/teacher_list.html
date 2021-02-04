@@ -1,0 +1,70 @@
+
+{% extends 'dashboard/dashboard_base.html' %}
+{% load static %}
+{% load crispy_forms_field %}
+{% block content %}
+<div class="inner_content">
+    <div class="d-flex "">
+        <h4>Teachers List</h4>
+        <form style="margin-left:auto" class="form-inline mr-4" action=".">
+            <a 
+            class="btn btn-primary btn-sm ml-2"
+            href="{% url 'profiles:teachers_create_bulk' %}">
+            Creat Bulk <i class="fas fa-plus"></i>
+            </a>
+        </form>
+        
+        
+    </div>
+ 
+    <div  class="search-form mt-4">
+        <form class="form-inline" action=".">
+            {% crispy_field form.last_name_query 'class' 'mr-2' %}
+            {% crispy_field form.subject_query 'class' 'mr-2' %}
+            <button type="submit" class="btn btn-success btn-sm mr-2">Filter</button>
+            <a 
+            class="btn btn-outline btn-outline-primary btn-sm"
+            href="{% url 'profiles:teachers_list' %}">
+                Clear
+            </a>
+            
+            </form>
+    </div>
+    <div class="profile_card_container row">
+
+        
+        {% for object in object_list %}
+            <div class="profile_card d-flex flex-column col-sm-6 col-md-4 mt-5">
+                <div class="profile_card_content">
+                    <div class="profile_card_header d-flex justify-content-center align-items-center p-3">
+                        <h6>{{ object.get_full_name }}</h6>
+                    </div>
+                    <div class="profile_card_content">
+                        <div class="d-flex justify-content-center align-items-center p-4">
+                            <img width="150"
+                            height="150"
+                            title="{{obj.get_full_name}}"
+                            class="rounded-circle" src="{{ object.profile_picture.url }}" alt="{{object.get_full_name}}">
+                        </div>
+                        <div class="d-flex p-4 profile_card_detail">
+                            <div>
+                                <h6>Email <small class="text-white">{{ object.email }}</small></h6>
+                                <h6>Phone <small class="text-white">{{ object.phone_number }}</small></h6>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="btn btn-block btn-success" href="{{ object.get_absolute_url }}">
+                                View Detail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <h6 class="mt-4 p-4 bg-default" styel>Nothing Found</h6>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}
