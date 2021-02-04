@@ -15,12 +15,14 @@ In order to run this container you'll need docker installed.
 * [Linux](https://docs.docker.com/engine/install/ubuntu/)
 
  Once you install the docker run the following command inside the 'TestProject' directory
-`sudo docker build -t dapp_image .`
+ 
+ `sudo docker build -t dapp_image .`
 
 Once build is successfull run below command to start the project 
-`sudo docker run --name dapp_image -p 8000:8000 dapp_container`
 
-Follow below "steps to see the project" section to start exploring the project
+ `sudo docker run --name dapp_image -p 8000:8000 dapp_container`
+
+Follow below `steps to explore the project` section to start exploring the project
 
 ### Step 2. Run and setup Manually
 
@@ -40,7 +42,7 @@ In order to run this app you'll need to install Python 3.6
 
 4. Run command `python3 manage.py runserver` to start the project
 
-### Steps to see the project
+### Steps to explore the project
 
 5. Go to this url : http://127.0.0.1:8000/ and it will redirect to http://127.0.0.1:8000/directory/teachers/list/
 
