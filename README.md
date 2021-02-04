@@ -24,7 +24,7 @@ Once build is successfull run below command to start the project
 
 Follow below `steps to explore the project` section to start exploring the project
 
-### Step 2. Run and setup Manually
+### Step 2. Setup and Run Manually
 
 ### Prerequisities
 
