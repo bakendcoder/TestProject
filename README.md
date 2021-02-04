@@ -20,7 +20,7 @@ In order to run this container you'll need docker installed.
 
 Once build is successfull run below command to start the project 
 
- `sudo docker run --name dapp_image -p 8000:8000 dapp_container`
+ `sudo docker run --name dapp_container -p 8000:8000 dapp_image`
 
 Follow below `steps to explore the project` section to start exploring the project
 
